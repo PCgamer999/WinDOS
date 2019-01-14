@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiscOperatingSystem));
             this.inputField = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -38,6 +39,7 @@
             this.inputField.MaxLength = 1000000;
             this.inputField.Multiline = true;
             this.inputField.Name = "inputField";
+            this.inputField.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.inputField.Size = new System.Drawing.Size(820, 453);
             this.inputField.TabIndex = 0;
             // 
@@ -47,6 +49,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.inputField);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DiscOperatingSystem";
             this.Text = "WinDOS";
             this.ResumeLayout(false);

@@ -124,10 +124,10 @@ namespace WinDOS
         {
             if (!regedit)
             {
-                string[] startupList = { "startup-config", "startup-dir", "startup-fcolor", "startup-bcolor", "startup-font", "startup-fullscreen", "startup-emulation", "startup-subkey" };
+                string[] startupList = { "startup-config", "startup-dir", "startup-fcolor", "startup-bcolor", "startup-font", "startup-fullscreen", "startup-emulation", "startup-subkey", "startup-shmotd", "startup-motd" };
                 string[] driverList = { "driver-info", "driver-check" };
                 string[] eraseList = { "erase-ini-config", "erase-registry-config" };
-                string[] cmdList = { "cd", "dir", "md", "rd", "mf", "fc", "open", "copy", "move", "del", "ren", "forecolor", "backcolor", "setfont", "fullscreen", "regedit", "emulation", "wordgen", "hashcrack", "mh", "biosinfo", "getnics", "nmap", "setmac", "resetmac", "copy-current-config", "shmotd", "motd", "exec", "start", "cls", "help", "restart", "exit" };
+                string[] cmdList = { "cd", "dir", "md", "rd", "mf", "fc", "open", "copy", "move", "del", "ren", "forecolor", "backcolor", "setfont", "fullscreen", "regedit", "emulation", "wordgen", "hashcrack", "mh", "biosinfo", "getnics", "nmap", "setmac", "resetmac", "copy-current-config", "exec", "start", "cls", "help", "restart", "exit" };
                 if ("startup-".StartsWith(input))
                 {
                     AutoCompleteReplace(input, "startup-");
@@ -266,6 +266,7 @@ namespace WinDOS
                 BootSource = BootOption.Registry;
             }
             engine.ApplySettings(this, true);
+            inputField.Focus();
         }
 
         private void InputField_KeyDown(object sender, KeyEventArgs e)
@@ -1710,11 +1711,11 @@ namespace WinDOS
                         case "startup-emulation":
                             STARTUP_EMULATION(cmd.Params[1], form, bLoader);
                             break;
-                        case "shmotd":
-                            SHMOTD(cmd.Params[1], form, bLoader);
+                        case "startup-shmotd":
+                            STARTUP_SHMOTD(cmd.Params[1], form, bLoader);
                             break;
-                        case "motd":
-                            MOTD(cmd.FullCommand.Substring(5), form, bLoader);
+                        case "startup-motd":
+                            STARTUP_MOTD(cmd.FullCommand.Substring(5), form, bLoader);
                             break;
                         case "startup-subkey":
                             STARTUP_SUBKEY(cmd.FullCommand.Substring(15), form, bLoader);
@@ -3445,7 +3446,7 @@ namespace WinDOS
             }
         }
 
-        private void SHMOTD(string input, DiscOperatingSystem form, Bootloader bLoader)
+        private void STARTUP_SHMOTD(string input, DiscOperatingSystem form, Bootloader bLoader)
         {
             switch (input)
             {
@@ -3480,7 +3481,7 @@ namespace WinDOS
             }
         }
 
-        private void MOTD(string input, DiscOperatingSystem form, Bootloader bLoader)
+        private void STARTUP_MOTD(string input, DiscOperatingSystem form, Bootloader bLoader)
         {
             switch (form.BootSource)
             {
@@ -3789,7 +3790,7 @@ namespace WinDOS
                 Environment.NewLine + "                             Usage: motd [motdContent];" +
                 Environment.NewLine + "                             Example: motd Hello there!" +
 
-                Environment.NewLine + Environment.NewLine + "STARTUP-SUBKEY                   Sets the regedit startup subkey;" +
+                Environment.NewLine + Environment.NewLine + "STARTUP-SUBKEY               Sets the regedit startup subkey;" +
                 Environment.NewLine + "                             Usage: startup-subkey [subkeyPath];" +
                 Environment.NewLine + "                             Example: startup-subkey HKEY_LOCAL_MACHINE\\SOFTWARE\\WinDOS" +
 

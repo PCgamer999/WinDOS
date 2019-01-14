@@ -22,3 +22,14 @@ F:\WinDOS\WinDOS\obj\x64\Release\WinDOS.csproj.CoreCompileInputs.cache
 F:\WinDOS\WinDOS\obj\x64\Release\WinDOS.csproj.CopyComplete
 F:\WinDOS\WinDOS\obj\x64\Release\WinDOS.exe
 F:\WinDOS\WinDOS\obj\x64\Release\WinDOS.pdb
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\bin\x64\Release\WinDOS.exe.config
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\bin\x64\Release\WinDOS.exe
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\bin\x64\Release\WinDOS.pdb
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\bin\x64\Release\NmapSharp.dll
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\obj\x64\Release\WinDOS.csprojResolveAssemblyReference.cache
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\obj\x64\Release\WinDOS.DiscOperatingSystem.resources
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\obj\x64\Release\WinDOS.Properties.Resources.resources
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\obj\x64\Release\WinDOS.csproj.GenerateResource.Cache
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\obj\x64\Release\WinDOS.csproj.CoreCompileInputs.cache
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\obj\x64\Release\WinDOS.exe
+C:\Users\NIMROD\Desktop\WinDOS\WinDOS\obj\x64\Release\WinDOS.pdb
